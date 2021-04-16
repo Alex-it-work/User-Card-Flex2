@@ -1,1 +1,79 @@
 @import "reset.css";
+body {
+  --cardSize: 400px;
+  --mainColor: grey;
+  --secondaryColor: rgb(182, 182, 182);
+  font-family: sans-serif;
+  font-size: 20px;
+}
+.flexContainer {
+  height: 100vh;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.cardContainer {
+  height: calc(var(--cardSize) * 1.9);
+  width: var(--cardSize);
+  background-color: snow;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+.userCardTop {
+  height: calc(var(--cardSize) * 0.8);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  /* background-color: yellowgreen; */
+}
+.userPhoto {
+  width: calc(var(--cardSize) * 0.35);
+  height: calc(var(--cardSize) * 0.35);
+  border-radius: 50%;
+  overflow: hidden;
+}
+.userPhoto > img {
+  width: calc(var(--cardSize) * 0.35);
+  height: calc(var(--cardSize) * 0.35);
+  z-index: 1;
+}
+.userStatus > img {
+  width: calc(var(--cardSize) * 0.08);
+  height: calc(var(--cardSize) * 0.08);
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  /* position: relative; */
+  /* top: calc(var(--cardSize) * (-0.08) / 2); */
+  /* z-index: 99; */
+  margin-top: calc(var(--cardSize) * (-0.08) / 2);
+}
+.userCardMain {
+  /* height: calc(var(--cardSize) * 0.6); */
+  width: 100%;
+  /* background-color: snow; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.userCardBottom {
+  /* height: calc(var(--cardSize) * 0.3); */
+  width: 100%;
+  background-color: snow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
