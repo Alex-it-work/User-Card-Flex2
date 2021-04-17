@@ -1,14 +1,13 @@
 @import "reset.css";
 body {
   --cardSize: 400px;
-  --mainColor: grey;
-  --secondaryColor: rgb(182, 182, 182);
+  --mainColor: rgb(182, 182, 182);
   font-family: sans-serif;
   font-size: 20px;
 }
 .flexContainer {
   height: 100vh;
-  background-color: whitesmoke;
+  background-color: rgb(190, 35, 35);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -17,12 +16,13 @@ body {
 .cardContainer {
   height: calc(var(--cardSize) * 1.9);
   width: var(--cardSize);
-  background-color: snow;
+  background-color: rgb(231, 231, 231);
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  margin-top: 30px;
 }
 .userCardTop {
   height: calc(var(--cardSize) * 0.8);
@@ -32,7 +32,6 @@ body {
   align-items: center;
   justify-content: center;
   background-color: white;
-  /* background-color: yellowgreen; */
 }
 .userPhoto {
   width: calc(var(--cardSize) * 0.35);
@@ -43,7 +42,6 @@ body {
 .userPhoto > img {
   width: calc(var(--cardSize) * 0.35);
   height: calc(var(--cardSize) * 0.35);
-  z-index: 1;
 }
 .userStatus > img {
   width: calc(var(--cardSize) * 0.08);
@@ -51,29 +49,75 @@ body {
   border-radius: 50%;
   overflow: hidden;
   background-color: rgb(255, 255, 255);
-  /* position: relative; */
-  /* top: calc(var(--cardSize) * (-0.08) / 2); */
-  /* z-index: 99; */
   margin-top: calc(var(--cardSize) * (-0.08) / 2);
 }
+.userName {
+  font-weight: 600;
+  font-size: 25px;
+  padding: 15px;
+}
+.userSalary {
+  color: var(--mainColor);
+  font-weight: 600;
+}
 .userCardMain {
-  /* height: calc(var(--cardSize) * 0.6); */
+  height: calc(var(--cardSize) * 0.65);
   width: 100%;
-  /* background-color: snow; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
+.userAddress {
+  font-weight: 600;
+  font-size: 22px;
+}
+.userLocation {
+  color: var(--mainColor);
+  padding-top: 15px;
+  font-size: 0.9em;
+}
+.userLocation img {
+  height: 20px;
+}
+.userShortInfo {
+  padding: 15px 30px;
+  color: var(--mainColor);
+}
 .userCardBottom {
-  /* height: calc(var(--cardSize) * 0.3); */
+  height: calc(var(--cardSize) * 0.55);
   width: 100%;
-  background-color: snow;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   overflow: hidden;
+  margin-top: auto;
+}
+.btnViewCV {
+  width: 200px;
+  color: dodgerblue;
+  text-decoration: none;
+  padding: 14px 20px;
+  border: 2px solid dodgerblue;
+  border-radius: 15px;
+  margin: 5px 0;
+  font-weight: 600;
+}
+.btnViewCV ~ .btnViewCV {
+  background-color: dodgerblue;
+  color: white;
+}
+.userOnlainStatus {
+  margin-top: 20px;
+}
+.userOnlainStatus > img {
+  height: 15px;
+  padding: 10px;
+}
+.userOnlainStatus > span {
+  color: var(--mainColor);
+  font-size: 0.9em;
 }
