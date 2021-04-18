@@ -2,20 +2,25 @@
 body {
   --cardSize: 400px;
   --mainColor: rgb(182, 182, 182);
-  font-family: sans-serif;
+  font-family: "Lato", sans-serif;
+  font-family: "Open Sans Condensed", sans-serif;
   font-size: 20px;
+  word-spacing: 3px;
+  background-color: rgb(190, 35, 35);
 }
 .flexContainer {
-  height: 100vh;
+  /* height: 100vh; */
   background-color: rgb(190, 35, 35);
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
+  /* align-items: center; */
+  /* flex-wrap: wrap; */
 }
 .cardContainer {
-  height: calc(var(--cardSize) * 1.9);
-  width: var(--cardSize);
+  /* height: calc(var(--cardSize) * 1.9); */
+  width: 100%;
+  min-width: calc(var(--cardSize) - 100px);
+  max-width: var(--cardSize);
   background-color: rgb(231, 231, 231);
   border-radius: 20px;
   display: flex;
@@ -61,13 +66,14 @@ body {
   font-weight: 600;
 }
 .userCardMain {
-  height: calc(var(--cardSize) * 0.65);
+  /* height: calc(var(--cardSize) * 0.65); */
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin-top: 20px;
 }
 .userAddress {
   font-weight: 600;
